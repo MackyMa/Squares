@@ -20,13 +20,11 @@ function addSquare(){
 
     square.style.backgroundColor = getRandomColor();
 
-    square.onclick = function(){
-        if(topsquare === square){
+    square.onclick = function() {
+        if(square.style.zIndex == 1000){
             square.remove();
-            topsquare = null;
         } else {
             square.style.zIndex = 1000;
-            topsquare = square;
         }
     };
     //put it on the screen
