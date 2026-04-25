@@ -24,3 +24,16 @@ function getRandomColor(){
     //return that string
     return color;
 }
+
+//Made a function to add one square 
+//Make sure that i set that as the onclick for the button 
+
+//Make dunction that chnages all the colors od all th squares 
+//make sure the button calls it
+function changeColors(){
+    //Make an array
+    let allSquares = document.querySelectorAll(".square");
+    //for loop with index 
+    //change the color 
+
+}
