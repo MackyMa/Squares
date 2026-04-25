@@ -19,20 +19,25 @@ function addSquare(){
     square.style.height = size + "px";
 
     square.style.backgroundColor = getRandomColor();
+
+    square.onclick = function(){
+        if(topsquare === square){
+            square.remove();
+            topsquare = null;
+        } else {
+            square.style.zIndex = 1000;
+            topsquare = square;
+        }
+    };
     //put it on the screen
     squareArea.append(square);
 }
-
-
-
-
-
-
 
 function getRandomColor(){
     //make a color string
     let letters = "0123456789ABCDEF";
     let color = "#";
+
     for(let i = 0; i < 6; i++){
         color += letters.charAt(parseInt(Math.random()*letters.length));
     }
@@ -48,7 +53,10 @@ function getRandomColor(){
 function changeColors(){
     //Make an array
     let allSquares = document.querySelectorAll(".square");
+
+    for (let i = 0; i < allSquares.length; i++){
+        allSquares[i].style.backgroundColor = getRandomColor();
     //for loop with index 
     //change the color 
-
+    }
 }
